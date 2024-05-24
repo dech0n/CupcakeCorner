@@ -15,7 +15,14 @@ class Order {
     var type = 0 // ...so we can use the index of types to define a type
     var quantity = 3
     
-    var specialRequestEnabled = false
+    var specialRequestEnabled = false {
+        didSet {
+            if specialRequestEnabled == false {
+                extraFrosting = false
+                addSprinkles = false
+            }
+        }
+    }
     var extraFrosting = false
     var addSprinkles = false
 }
