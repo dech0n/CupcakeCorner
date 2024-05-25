@@ -9,10 +9,10 @@ import Foundation
 
 @Observable
 class Order {
-    // static constant ensures the array & its indices will never change...
+    // static & constant ensures the array & its indices will never change...
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
     
-    var type = 0 // ...so we can use the index of types to define a type
+    var type = 0 // ...so we can use the index of `types` to define a type
     var quantity = 3
     
     var specialRequestEnabled = false {
@@ -23,6 +23,7 @@ class Order {
             }
         }
     }
+    
     var extraFrosting = false
     var addSprinkles = false
     
