@@ -39,4 +39,24 @@ class Order {
         
         return true
     }
+    
+    var cost: Decimal { // more accurate/safe than Double; great for money
+        // $2 per cake
+        var cost = Decimal(quantity) * 2
+        
+        // complicated cakes cost more
+        cost += Decimal(type) / 2
+        
+        // $1 per cake for extra frosting
+        if extraFrosting {
+            cost += Decimal(quantity)
+        }
+        
+        // $0.50 per cake
+        if addSprinkles {
+            cost += Decimal(quantity) * 0.5
+        }
+        
+        return cost
+    }
 }
