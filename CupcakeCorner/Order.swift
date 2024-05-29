@@ -44,12 +44,16 @@ class Order: Codable {
     var zip = ""
     
     var hasValidAddress: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        if name.isEmptyOrBlank
+            || streetAddress.isEmptyOrBlank
+            || city.isEmptyOrBlank
+            || zip.isEmptyOrBlank {
             return false
         }
         
         return true
     }
+    
     
     var cost: Decimal { // more accurate/safe than Double; great for money
         // $2 per cake

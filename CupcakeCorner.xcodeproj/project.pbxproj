@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B96D6ED92C06D1AC00A01450 /* String-EmptyOrBlank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D6ED82C06D1AC00A01450 /* String-EmptyOrBlank.swift */; };
 		B9E133382BFECA1C008334C0 /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E133372BFECA1C008334C0 /* CupcakeCornerApp.swift */; };
 		B9E1333A2BFECA1C008334C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E133392BFECA1C008334C0 /* ContentView.swift */; };
 		B9E1333C2BFECA1D008334C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E1333B2BFECA1D008334C0 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B96D6ED82C06D1AC00A01450 /* String-EmptyOrBlank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-EmptyOrBlank.swift"; sourceTree = "<group>"; };
 		B9E133342BFECA1C008334C0 /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E133372BFECA1C008334C0 /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
 		B9E133392BFECA1C008334C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				B9E133372BFECA1C008334C0 /* CupcakeCornerApp.swift */,
 				B9E133392BFECA1C008334C0 /* ContentView.swift */,
 				B9E133452C014291008334C0 /* Order.swift */,
+				B96D6ED82C06D1AC00A01450 /* String-EmptyOrBlank.swift */,
 				B9E133472C0146DF008334C0 /* AddressView.swift */,
 				B9E133492C017A96008334C0 /* CheckoutView.swift */,
 				B9E1333B2BFECA1D008334C0 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			files = (
 				B9E133462C014291008334C0 /* Order.swift in Sources */,
 				B9E133482C0146DF008334C0 /* AddressView.swift in Sources */,
+				B96D6ED92C06D1AC00A01450 /* String-EmptyOrBlank.swift in Sources */,
 				B9E1334A2C017A96008334C0 /* CheckoutView.swift in Sources */,
 				B9E1333A2BFECA1C008334C0 /* ContentView.swift in Sources */,
 				B9E133382BFECA1C008334C0 /* CupcakeCornerApp.swift in Sources */,
