@@ -23,10 +23,23 @@ class Order: Codable {
     // static & constant ensures the array & its indices will never change...
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
     
-    var type = 0 // ...so we can use the index of `types` to define a type
-    var quantity = 3
+    var type = UserDefaults.standard.integer(forKey: "type") { // ...so we can use the index of `types` to define a type
+        willSet {
+            UserDefaults.standard.setValue(newValue, forKey: "type")
+        }
+    }
     
-    var specialRequestEnabled = false {
+    var quantity = UserDefaults.standard.integer(forKey: "quantity") {
+        willSet {
+            UserDefaults.standard.setValue(newValue, forKey: "quantity")
+        }
+    }
+    
+    var specialRequestEnabled = UserDefaults.standard.bool(forKey: "specialRequestEnabled") {
+        willSet {
+            UserDefaults.standard.setValue(newValue, forKey: "specialRequestEnabled")
+        }
+        
         didSet {
             if specialRequestEnabled == false {
                 extraFrosting = false
@@ -35,13 +48,41 @@ class Order: Codable {
         }
     }
     
-    var extraFrosting = false
-    var addSprinkles = false
+    var extraFrosting = UserDefaults.standard.bool(forKey: "extraFrosting") {
+        willSet {
+            UserDefaults.standard.setValue(newValue, forKey: "extraFrosting")
+        }
+    }
     
-    var name = ""
-    var streetAddress = ""
-    var city = ""
-    var zip = ""
+    var addSprinkles = UserDefaults.standard.bool(forKey: "addSprinkles") {
+        willSet {
+            UserDefaults.standard.setValue(newValue, forKey: "addSprinkles")
+        }
+    }
+    
+    var name = UserDefaults.standard.string(forKey: "name") ?? "" {
+        willSet {
+            UserDefaults.standard.setValue(newValue, forKey: "name")
+        }
+    }
+    
+    var streetAddress = UserDefaults.standard.string(forKey: "streetAddress") ?? "" {
+        willSet {
+            UserDefaults.standard.setValue(newValue, forKey: "streetAddress")
+        }
+    }
+    
+    var city = UserDefaults.standard.string(forKey: "city") ?? "" {
+        willSet {
+            UserDefaults.standard.setValue(newValue, forKey: "city")
+        }
+    }
+    
+    var zip = UserDefaults.standard.string(forKey: "zip") ?? "" {
+        willSet {
+            UserDefaults.standard.setValue(newValue, forKey: "zip")
+        }
+    }
     
     var hasValidAddress: Bool {
         if name.isEmptyOrBlank
